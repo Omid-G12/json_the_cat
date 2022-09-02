@@ -17,11 +17,10 @@ request('https://api.thecatapi.com/v1/breeds', (error, response, body) => {
   //console.log("breed id: " + id);
 
   request(`https://api.thecatapi.com/v1/breeds/search?q=${id}`, (error, response, body) => {
-  //console.log(typeof body);
-  const data = JSON.parse(body);
-  //console.log(typeof data);
-  //console.log(data);
-  console.log(data[0].description)
+  
+    const data = JSON.parse(body);
+  
+    console.log(data[0].description);
+  });
 });
-})
 
